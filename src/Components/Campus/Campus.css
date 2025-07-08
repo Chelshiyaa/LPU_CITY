@@ -1,0 +1,20 @@
+.campus{
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    gap: 10px;
+    width: fit-content;       /* shrink to fit images */
+    margin: 50 10;           /* centers the grid */
+    padding: 10px;         
+}
+.gallery img{
+    width: 350px;   /* or 100%, or any value you want */
+    height: 200px;  /* makes them square */
+    object-fit: cover; /* important to crop instead of stretching */
+    border-radius: 10px; /* optional: for rounded corners */
+}
