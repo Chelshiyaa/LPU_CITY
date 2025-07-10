@@ -1,6 +1,8 @@
 nav {
   width: 100%;
   color: #fff;
+  background: #626265;   /* Your brown-gray color */
+  opacity: 0.85;         /* Slight transparency */
   padding: 4px 0;
   position: fixed;
   top: 0;
@@ -9,6 +11,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  transition: background 0.5s ease;
+  backdrop-filter: blur(4px); /* Optional: soft blur behind */
 }
 
 .logo {
@@ -21,17 +25,31 @@ nav ul li {
   list-style: none;
   margin: 5px 20px;
   font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-.dark-nav {
-  background: #626265;
-  transition: 0.5s;
-  opacity: 0.8;
+nav ul li:hover {
+  color: #112726;
 }
-
 
 /* media query */
-
 @media (max-width: 1000px) {
-  
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
 }

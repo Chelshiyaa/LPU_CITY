@@ -1,0 +1,64 @@
+/* Page Backgrounds */
+.page-background {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px; /* To push content below fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Background Images for Each Page */
+.graduation-bg {
+  background-image: url('/images/grad-bg.jpg');
+}
+
+.masters-bg {
+  background-image: url('/images/masters-bg.jpg');
+}
+
+.postgrad-bg {
+  background-image: url('/images/postgrad-bg.jpg');
+}
+
+/* Container Styling */
+.programs-container {
+  background-color: rgba(30, 39, 46, 0.9); /* semi-transparent dark */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  padding: 2rem;
+}
+
+/* Title */
+.programs-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* List */
+.programs-list {
+  list-style-type: square;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: #dcdde1;
+}
+
+.programs-list li {
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.programs-list li:hover {
+  transform: translateX(5px);
+  color: #00cec9;
+  font-weight: 500;
+}

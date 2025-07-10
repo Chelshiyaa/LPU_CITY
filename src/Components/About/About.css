@@ -1,47 +1,120 @@
-.about{
-    margin: 100px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+/* Main About Section */
+.about {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 40px;
 }
 
-.about-left{
-    flex-basis: 40%;
-    position: relative;
-}
-.about-right{
-    flex-basis: 56%;
-}
-.about-img{
-    width: 100%;
-    border-radius: 10;
+/* Left side: Video or Thumbnail Preview */
+.about-left {
+  flex-basis: 40%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.play-icon{
-    width: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    opacity: 0.8;
-    border-radius: 50%;  
-    object-fit: cover;   
+/* Thumbnail Container */
+.video-preview {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
 }
 
-.about h3{
-    font-weight: 600;
-    font-size: 16px;
-    color :#212EA0;
-}
-.about h2{
-    font-size: 35px;
-    color: #000F38;
-    margin: 10px 0;
-    max-width: 400px;
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
-.about p{
-    color: #676767;
-    margin-bottom: 15px;
+/* Play icon overlay */
+.play-icon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.play-icon:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+/* Actual video element (shown after play) */
+.about-video {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Hide/show video on toggle */
+.about-video.hide {
+  display: none;
+}
+
+.about-video.show {
+  display: block;
+}
+
+/* Right side: Text content */
+.about-right {
+  flex-basis: 56%;
+}
+
+.about h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #212EA0;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: #000F38;
+  margin: 10px 0 20px;
+  max-width: 500px;
+  line-height: 1.3;
+}
+
+.about p {
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .about-left,
+  .about-right {
+    flex-basis: 100%;
+  }
+
+  .about h2 {
+    font-size: 28px;
+    max-width: 100%;
+  }
 }

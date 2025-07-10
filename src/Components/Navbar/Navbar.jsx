@@ -1,35 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 import lpulogo from '../../assets/lpulogo.png';
-import { Link } from 'react-scroll';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  const [sticky, setSticky] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setSticky(window.scrollY > 50);
-    };
+  const handleNavigation = (id) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToId(id), 100);
+    } else {
+      scrollToId(id);
+    }
+  };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll); // Cleanup
-    };
-  }, []);
+  const scrollToId = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
+    <nav className="navbar-dark">
       <img src={lpulogo} alt="logo" className="logo" />
       <ul>
-        <li><Link to='hero' smooth={true} offset={0} duration={500}>Home</Link></li>
-        <li><Link to='program' smooth={true} offset={-220} duration={500}>Courses</Link></li>
-        <li><Link to='about' smooth={true} offset={-120} duration={500}>About Us</Link></li>
-        <li><Link to='campus' smooth={true} offset={-230} duration={500}>Campus</Link></li>
-        <li><Link to='testimonials' smooth={true} offset={-220} duration={500}>Testimonials</Link></li>
-        <li>
-          <Link to='contact' smooth={true} offset={-220} duration={500}>Contact us</Link>
-        </li>
+        <li onClick={() => handleNavigation('hero')}>Home</li>
+        <li onClick={() => handleNavigation('program')}>Courses</li>
+        <li onClick={() => handleNavigation('about')}>About Us</li>
+        <li onClick={() => handleNavigation('campus')}>Campus</li>
+        <li onClick={() => handleNavigation('testimonials')}>Testimonials</li>
+        <li onClick={() => handleNavigation('contact')}>Contact Us</li>
       </ul>
     </nav>
   );

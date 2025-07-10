@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Programs.css';
 import program1 from '../../assets/pro1.png';
 import program2 from '../../assets/pro2.png';
@@ -10,27 +11,29 @@ import grad3 from '../../assets/grad3.png';
 const Programs = () => {
   return (
     <div className='programs'>
-      <div className='program'>
+      <Link to="/graduation" className='program'>
         <img className="program-img" src={program1} alt="Program 1" />
         <div className="caption">
           <img src={grad1} alt="Graduation" />
           <p>Graduation Degree</p>
         </div>
-      </div>
-      <div className='program'>
+      </Link>
+
+      <Link to="/masters" className='program'>
         <img className="program-img" src={program2} alt="Program 2" />
         <div className="caption">
           <img src={grad2} alt="Graduation" />
-          <p>Graduation Degree</p>
+          <p>Master's Degree</p>
         </div>
-      </div>
-      <div className='program'>
+      </Link>
+
+      <Link to="/postgraduation" className='program'>
         <img className="program-img" src={program3} alt="Program 3" />
         <div className="caption">
           <img src={grad3} alt="Graduation" />
-          <p>Graduation Degree</p>
+          <p>Post Graduation Degree</p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
