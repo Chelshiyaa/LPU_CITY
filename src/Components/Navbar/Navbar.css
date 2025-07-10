@@ -33,7 +33,22 @@ nav ul li:hover {
   color: #112726;
 }
 
-/* media query */
+/* ✅ ADD THIS BELOW — Only hamburger logic */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
 @media (max-width: 1000px) {
   nav {
     flex-direction: column;
@@ -41,15 +56,23 @@ nav ul li:hover {
     padding: 10px 20px;
   }
 
-  nav ul {
+  .hamburger {
     display: flex;
+    align-self: flex-end;
+  }
+
+  nav ul {
+    display: none;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
   }
 
+  nav ul.nav-open {
+    display: flex;
+  }
+
   nav ul li {
-    margin: 10px 0;
+    margin: 10px 20px;
     font-size: 18px;
   }
 }

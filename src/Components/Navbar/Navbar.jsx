@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import lpulogo from '../../assets/lpulogo.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleNavigation = (id) => {
+    setIsOpen(false); // close mobile nav
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => scrollToId(id), 100);
@@ -24,9 +26,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar-dark">
+    <nav>
       <img src={lpulogo} alt="logo" className="logo" />
-      <ul>
+
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <div className="bar" />
+        <div className="bar" />
+        <div className="bar" />
+      </div>
+
+      <ul className={isOpen ? 'nav-open' : ''}>
         <li onClick={() => handleNavigation('hero')}>Home</li>
         <li onClick={() => handleNavigation('program')}>Courses</li>
         <li onClick={() => handleNavigation('about')}>About Us</li>
