@@ -1,16 +1,18 @@
-.contact{
+.contact {
     margin: 80px auto;
     max-width: 90%;
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
-.contact-col{
+
+.contact-col {
     flex-basis: 48%;
     color: #625d5d;
     margin-left: 50px;
 }
-.contact-col h3{
+
+.contact-col h3 {
     color: #000F38;
     font-weight: 500;
     font-size: 25px;
@@ -18,37 +20,80 @@
     display: flex;
     margin-bottom: 20px;
 }
-.contact-col h3 img{
+
+.contact-col h3 img {
     width: 35px;
     margin-left: 10px;
+}
 
-}
-.contact-col p{
+.contact-col p {
     max-width: 450px;
-    list-style:0.3;
+    list-style: 0.3;
 }
-.contact-col ul li{
+
+.contact-col ul li {
     display: flex;
     align-items: center;
     margin: 20px 0;
 }
-.contact-col ul li img{
+
+.contact-col ul li img {
     width: 20px;
     margin-right: 10px;
 }
-.contact form input,.contact form textarea{
+
+.contact form input,
+.contact form textarea {
     display: block;
     width: 100%;
     background: #EBECFE;
     padding: 15px;
-    border:0;
+    border: 0;
     outline: 0;
     margin-top: 5px;
     margin-bottom: 15px;
-    resize:none;
+    resize: none;
     margin-right: 250px;
 }
-.contact span{
+
+.contact span {
     display: block;
     margin: 20px 0;
+}
+
+/* ✅ Responsive Additions */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contact-col {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-col h3 {
+        justify-content: center;
+    }
+
+    .contact-col ul {
+        padding: 0;
+    }
+
+    .contact-col ul li {
+        justify-content: center;
+    }
+
+    .contact form {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        margin-right: 0;
+    }
 }

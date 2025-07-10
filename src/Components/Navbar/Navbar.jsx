@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const handleNavigation = (id) => {
-    setIsOpen(false); // close mobile nav
+    setIsOpen(false);
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => scrollToId(id), 100);
@@ -30,9 +30,9 @@ const Navbar = () => {
       <img src={lpulogo} alt="logo" className="logo" />
 
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        <div className="bar" />
-        <div className="bar" />
-        <div className="bar" />
+        <span className="bar" />
+        <span className="bar" />
+        <span className="bar" />
       </div>
 
       <ul className={isOpen ? 'nav-open' : ''}>

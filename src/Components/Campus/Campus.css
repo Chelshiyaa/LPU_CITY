@@ -1,41 +1,54 @@
 .campus {
-    margin: 80px auto;
-    width: 90%;
-    text-align: center;
+  margin: 80px auto;
+  width: 90%;
+  text-align: center;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
 .gallery img {
-    width: 100%;
-    max-width: 350px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .btn.dark-btn {
-    padding: 10px 25px;
-    background-color: #222;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .btn.dark-btn:hover {
-    background-color: #444;
+  background-color: #444;
+}
+
+/* ✅ Responsive Grid */
+@media (max-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
