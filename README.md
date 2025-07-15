@@ -1,6 +1,6 @@
 # 🎓 LPU City – Responsive University Website
 
-**LPU City** is a responsive single-page website for a fictional university, built using **React.js**. It showcases academic programs, campus glimpses, testimonials, and a contact form, with smooth navigation and optimized layout for all screen sizes.
+**LPU City** is a responsive single-page website for Lovely Proffesional university, built using **React.js**. It showcases academic programs, campus glimpses, testimonials, and a contact form, with smooth navigation and optimized layout for all screen sizes.
 
 🔗 **Live Demo:** [lpucitybychelshiya.netlify.app](https://lpucitybychelshiya.netlify.app/)  
 📂 **GitHub Repo:** [github.com/Chelshiyaa/LPU_CITY](https://github.com/Chelshiyaa/LPU_CITY)
