@@ -8,18 +8,16 @@
   flex-wrap: wrap;
   gap: 30px;
 
-  /* 🌈 SVG + Gradient Background */
-  background-image: 
-    url('https://www.transparenttextures.com/patterns/geometry2.png'),
-    linear-gradient(to right, #d4cbc4, #544f4b);
-  background-blend-mode: overlay;
-  background-size: auto, cover;
-  background-repeat: repeat, no-repeat;
-  background-position: top left, center;
-
+  /* Warm UMS Theme Background */
+  background: linear-gradient(
+    135deg,
+    var(--clean-off-white),
+    var(--soft-butterscotch)
+  );
   padding: 60px 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  box-shadow: 0 15px 50px var(--shadow-light);
+  border: 2px solid rgba(244, 180, 0, 0.2);
 }
 
 /* ========== INDIVIDUAL PROGRAM CARD ========== */
@@ -27,19 +25,20 @@
   flex-basis: 31%;
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   cursor: pointer;
   height: 320px;
-  background: #8b7b7b;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--clean-off-white);
+  box-shadow: 0 8px 25px var(--shadow-light);
+  transition: var(--transition-smooth);
+  border: 2px solid var(--soft-butterscotch);
 }
 
 /* Hover effect: Elevate + Border */
 .program:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
-  border: 3px solid #64554b;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--shadow-medium);
+  border: 3px solid var(--primary-warm-yellow);
 }
 
 /* ========== PROGRAM IMAGE ========== */
