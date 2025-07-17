@@ -1,28 +1,59 @@
-.hero{
-    width: 100%;
-    min-height: 100vh;
-    background:linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('../../assets/backg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center; */
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(244, 180, 0, 0.1), rgba(66, 133, 244, 0.2)),
+    url("../../assets/backg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--dark-charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  position: relative;
 }
-.hero-text{
-    text-align: center;
-    max-width: 800px;
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 253, 247, 0.9),
+    rgba(244, 180, 0, 0.1)
+  );
+  z-index: 1;
 }
-.hero-text h1{
-    font-size: 50px;
-    font-weight: 500;
+
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  background: rgba(255, 253, 247, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--shadow-medium);
+  backdrop-filter: blur(10px);
 }
-.hero-text p{
-    max-width: 700;
-    margin: 10px auto 20 px;
-    line-height: 1.4;
-    padding-bottom:2%;
-    padding-top: 1%;
+
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--dark-charcoal);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(244, 180, 0, 0.3);
+}
+
+.hero-text p {
+  max-width: 700px;
+  margin: 10px auto 30px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: var(--dark-charcoal);
+  font-weight: 400;
 }

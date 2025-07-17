@@ -13,3 +13,34 @@
     margin-top: 5px;
     text-transform: none;
 }
+.title {
+  text-align: center;
+  color: var(--warm-blue);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 70px 0 30px;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-warm-yellow);
+  border-radius: 2px;
+}
+
+.title h2 {
+  font-size: 36px;
+  color: var(--dark-charcoal);
+  margin-top: 15px;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(244, 180, 0, 0.2);
+}

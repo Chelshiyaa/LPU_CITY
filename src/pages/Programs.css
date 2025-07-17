@@ -2,10 +2,15 @@
 .page-background {
   min-height: 100vh;
   width: 100%;
-  padding-top: 80px; /* To push content below fixed navbar */
+  padding-top: 80px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  background: linear-gradient(
+    135deg,
+    var(--clean-off-white),
+    var(--soft-butterscotch)
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,52 +18,93 @@
 
 /* Background Images for Each Page */
 .graduation-bg {
-  background-image: url('/images/grad-bg.jpg');
+  background: linear-gradient(
+      135deg,
+      rgba(255, 253, 247, 0.9),
+      rgba(244, 180, 0, 0.1)
+    ),
+    url("/images/grad-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .masters-bg {
-  background-image: url('/images/masters-bg.jpg');
+  background: linear-gradient(
+      135deg,
+      rgba(255, 253, 247, 0.9),
+      rgba(66, 133, 244, 0.1)
+    ),
+    url("/images/masters-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .postgrad-bg {
-  background-image: url('/images/postgrad-bg.jpg');
+  background: linear-gradient(
+      135deg,
+      rgba(255, 253, 247, 0.9),
+      rgba(255, 218, 122, 0.1)
+    ),
+    url("/images/postgrad-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Container Styling */
 .programs-container {
-  background-color: rgba(30, 39, 46, 0.9); /* semi-transparent dark */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 253, 247, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 15px 50px var(--shadow-medium);
   max-width: 800px;
   width: 90%;
-  padding: 2rem;
+  padding: 3rem;
+  border: 3px solid var(--soft-butterscotch);
+  backdrop-filter: blur(10px);
 }
 
 /* Title */
 .programs-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(244, 180, 0, 0.3);
 }
 
 /* List */
 .programs-list {
-  list-style-type: square;
-  padding-left: 2rem;
-  font-size: 1.1rem;
-  color: #dcdde1;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+  color: var(--dark-charcoal);
 }
 
 .programs-list li {
-  margin-bottom: 0.5rem;
-  transition: transform 0.2s ease, color 0.2s ease;
+  margin-bottom: 1rem;
+  padding: 15px 20px;
+  background: var(--clean-off-white);
+  border-radius: 15px;
+  border-left: 5px solid var(--primary-warm-yellow);
+  box-shadow: 0 4px 15px var(--shadow-light);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.programs-list li::before {
+  content: "✓";
+  color: var(--primary-warm-yellow);
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 10px;
 }
 
 .programs-list li:hover {
-  transform: translateX(5px);
-  color: #00cec9;
-  font-weight: 500;
+  transform: translateX(10px) translateY(-3px);
+  color: var(--dark-charcoal);
+  font-weight: 600;
+  border-left-color: var(--warm-blue);
+  box-shadow: 0 8px 25px var(--shadow-medium);
 }

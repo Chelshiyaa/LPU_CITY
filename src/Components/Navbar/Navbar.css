@@ -1,9 +1,8 @@
 nav {
   width: 100%;
-  color: #fff;
-  background: #626265;
-  opacity: 0.85;
-  padding: 10px 20px;
+  color: var(--dark-charcoal);
+  background: rgba(255, 253, 247, 0.95);
+  padding: 15px 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,9 +10,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  transition: background 0.5s ease;
-  backdrop-filter: blur(4px);
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
   box-sizing: border-box;
+  border-bottom: 2px solid var(--soft-butterscotch);
+  box-shadow: 0 4px 20px var(--shadow-light);
 }
 
 .logo {
@@ -34,7 +35,8 @@ nav ul li {
 }
 
 nav ul li:hover {
-  color: #112726;
+  color: var(--primary-warm-yellow);
+  transform: translateY(-2px);
 }
 
 .hamburger {
@@ -47,8 +49,9 @@ nav ul li:hover {
 .bar {
   width: 25px;
   height: 3px;
-  background-color: white;
-  border-radius: 2px;
+  background-color: var(--dark-charcoal);
+  border-radius: 3px;
+  transition: var(--transition-smooth);
 }
 
 /* ✅ Mobile responsive */
@@ -64,9 +67,11 @@ nav ul li:hover {
     top: 60px;
     left: 0;
     right: 0;
-    background: #626265;
-    padding: 10px 0;
+    background: var(--clean-off-white);
+    padding: 20px 0;
     text-align: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
   }
 
   nav ul.nav-open {

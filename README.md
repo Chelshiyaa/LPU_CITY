@@ -1,12 +1,78 @@
-# React + Vite
+# 🎓 LPU City – Responsive University Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**LPU City** is a responsive single-page website for Lovely Proffesional university, built using **React.js**. It showcases academic programs, campus glimpses, testimonials, and a contact form, with smooth navigation and optimized layout for all screen sizes.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [lpucitybychelshiya.netlify.app](https://lpucitybychelshiya.netlify.app/)  
+📂 **GitHub Repo:** [github.com/Chelshiyaa/LPU_CITY](https://github.com/Chelshiyaa/LPU_CITY)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Responsive layout with **React.js** and custom CSS
+- Smooth internal routing using **React Router DOM**
+- Section-based navigation with scroll handling
+- Reusable UI components like Hero, About, Campus, Testimonials, and Contact
+- Interactive **Campus Gallery** with route-based "See More" page
+- Mobile-friendly design with hamburger menu and adaptive grids
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+**Frontend:** React.js, JavaScript, HTML5, CSS3  
+**Routing:** React Router DOM  
+**Design:** Flexbox, CSS Grid, Media Queries  
+**Assets:** Custom images, icons, and embedded video (`abt.mp4`)
+
+## 📁 Folder Structure (Simplified)
+
+LPU_CITY/
+├── App.jsx
+├── main.jsx
+├── index.css
+├── assets/ # Images, video, icons
+├── Components/
+│ ├── Hero, About, Campus, Contact, Footer, Navbar, Programs, Testimonials
+├── pages/
+│ ├── CampusGallery.jsx, Graduation.jsx, Masters.jsx, PostGraduation.jsx
+
+markdown
+Copy
+Edit
+
+## 📦 Getting Started
+
+1. Clone the repository:
+
+git clone https://github.com/Chelshiyaa/LPU_CITY.git
+cd LPU_CITY
+
+markdown
+Copy
+Edit
+
+2. Install dependencies:
+
+npm install
+
+markdown
+Copy
+Edit
+
+3. Start the development server:
+
+npm run dev
+
+markdown
+Copy
+Edit
+
+4. Open `http://localhost:5173` in your browser.
+
+## 📌 Future Scope
+
+- Backend integration for contact form
+- Admin panel for dynamic content updates
+- Animations for enhanced UX
+
+---
+
+> 💻 Created with ❤️ by **Chelshiya Gautam**  
+> 🌐 [Live Site](https://lpucitybychelshiya.netlify.app/) | 📂 [GitHub](https://github.com/Chelshiyaa/LPU_CITY)
