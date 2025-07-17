@@ -1,48 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* UMS Warm Theme Variables */
+:root {
+  --primary-warm-yellow: #f4b400;
+  --soft-butterscotch: #ffda7a;
+  --warm-blue: #4285f4;
+  --clean-off-white: #fffdf7;
+  --dark-charcoal: #2c2c2c;
+  --light-gray: #f8f8f8;
+  --shadow-light: rgba(244, 180, 0, 0.1);
+  --shadow-medium: rgba(244, 180, 0, 0.2);
+  --transition-smooth: all 0.3s ease;
 }
-body{
-    background: #f5f5f5;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
-a{
-    text-decoration: none;
-    color: inherit;
-    line-height: 1;
-    cursor: pointer;
+
+body {
+  background: var(--clean-off-white);
+  color: var(--dark-charcoal);
+  line-height: 1.6;
 }
-.container{
-    padding-left: 3%;
-    padding-right: 3%;
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-smooth);
 }
-.btn{
-    background: #FFF;
-    color: #212121;
-    padding: 14px 25px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    border: 0;
-    outline: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+
+a:hover {
+  color: var(--primary-warm-yellow);
 }
-.btn.dark-btn{
-    background: #83888d;
-    
+
+.container {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.btn {
+  background: var(--primary-warm-yellow);
+  color: var(--dark-charcoal);
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+.btn:hover {
+  background: var(--soft-butterscotch);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+.btn.dark-btn {
+  background: var(--warm-blue);
+  color: white;
+}
+
+.btn.dark-btn:hover {
+  background: #3367d6;
+  transform: translateY(-2px);
 }
 
 /* media query */
-@media (max-width: 1200px){
-    .container{
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .btn{
-        padding: 14px 22px
-    }
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn {
+    padding: 14px 22px;
+  }
 }
