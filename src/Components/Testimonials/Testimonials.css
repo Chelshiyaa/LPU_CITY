@@ -2,11 +2,7 @@
   margin: 80px auto;
   padding: 60px 80px;
   position: relative;
-  background: linear-gradient(
-    135deg,
-    var(--clean-off-white),
-    rgba(244, 180, 0, 0.05)
-  );
+  background-color: #9d8e7ffd; /* Solid rich brown */
   border-radius: 25px;
   box-shadow: 0 15px 50px var(--shadow-light);
 }

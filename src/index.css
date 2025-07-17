@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-/* UMS Warm Theme Variables */
+/* ✨ Soft Professional Brown Theme Variables */
 :root {
-  --primary-warm-yellow: #f4b400;
-  --soft-butterscotch: #ffda7a;
-  --warm-blue: #4285f4;
-  --clean-off-white: #fffdf7;
-  --dark-charcoal: #2c2c2c;
-  --light-gray: #f8f8f8;
-  --shadow-light: rgba(244, 180, 0, 0.1);
-  --shadow-medium: rgba(244, 180, 0, 0.2);
+  --primary-warm-yellow: #957e63; /* Muted golden brown */
+  --soft-butterscotch: #a48f6f;   /* Soft tan-like tone */
+  --warm-blue: #b07920e5;           /* Muted steel blue */
+  --clean-off-white: #f1ede9;;    /* Soft background white */
+  --dark-charcoal: #2c2c2c;       /* Deep readable gray */
+  --light-gray: #928f8f;
+  --shadow-light: rgba(124, 84, 47, 0.1);  /* Soft brown shadow */
+  --shadow-medium: rgba(124, 84, 47, 0.2); /* Medium brown shadow */
   --transition-smooth: all 0.3s ease;
 }
 
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +27,7 @@ body {
   line-height: 1.6;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -38,11 +40,13 @@ a:hover {
   color: var(--primary-warm-yellow);
 }
 
+/* Containers */
 .container {
   padding-left: 3%;
   padding-right: 3%;
 }
 
+/* Buttons */
 .btn {
   background: var(--primary-warm-yellow);
   color: var(--dark-charcoal);
@@ -66,22 +70,24 @@ a:hover {
   box-shadow: 0 6px 20px var(--shadow-medium);
 }
 
+/* Dark Variant Button */
 .btn.dark-btn {
   background: var(--warm-blue);
   color: white;
 }
 
 .btn.dark-btn:hover {
-  background: #3367d6;
+  background: #5a6b7f; /* Slightly lighter hover */
   transform: translateY(-2px);
 }
 
-/* media query */
+/* Media Query for Smaller Screens */
 @media (max-width: 1200px) {
   .container {
     padding-left: 5%;
     padding-right: 5%;
   }
+
   .btn {
     padding: 14px 22px;
   }
