@@ -4,18 +4,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allow wrapping for small screens */
   width: 90%;
   gap: 40px;
   padding: 60px 40px;
   background: var(--clean-off-white);
   border-radius: 25px;
   box-shadow: 0 15px 50px var(--shadow-light);
+  box-sizing: border-box;
 }
 
 /* Left side: Video or Thumbnail Preview */
 .about-left {
-  flex-basis: 40%;
+  flex: 1;
+  min-width: 300px;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -78,7 +80,8 @@
 
 /* Right side: Text content */
 .about-right {
-  flex-basis: 56%;
+  flex: 1;
+  min-width: 300px;
 }
 
 .about h3 {
@@ -107,17 +110,17 @@
   opacity: 0.8;
 }
 
-/* Responsive Design */
+/* ✅ Responsive Design: Stack vertically on small screens */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
-    gap: 60px;
     text-align: center;
   }
 
   .about-left,
   .about-right {
     flex-basis: 100%;
+    min-width: auto;
   }
 
   .about h2 {

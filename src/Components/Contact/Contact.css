@@ -34,7 +34,7 @@
 .contact-col h3 img {
   width: 40px;
   margin-left: 15px;
-  filter: drop-shadow(2px 2px 4px rgba(244, 180, 0, 0.3));
+  filter: drop-shadow(2px 2px 4px rgba(90, 71, 18, 0.3));
 }
 
 .contact-col p {

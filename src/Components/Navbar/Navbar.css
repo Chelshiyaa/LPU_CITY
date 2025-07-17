@@ -32,6 +32,7 @@ nav ul li {
   font-size: 18px;
   cursor: pointer;
   transition: color 0.3s;
+  padding: 0 10px;
 }
 
 nav ul li:hover {
