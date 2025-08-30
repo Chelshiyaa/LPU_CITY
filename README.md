@@ -33,9 +33,6 @@ LPU_CITY/
 ├── pages/
 │ ├── CampusGallery.jsx, Graduation.jsx, Masters.jsx, PostGraduation.jsx
 
-markdown
-Copy
-Edit
 
 ## 📦 Getting Started
 
@@ -44,25 +41,14 @@ Edit
 git clone https://github.com/Chelshiyaa/LPU_CITY.git
 cd LPU_CITY
 
-markdown
-Copy
-Edit
 
 2. Install dependencies:
 
 npm install
 
-markdown
-Copy
-Edit
-
 3. Start the development server:
 
 npm run dev
-
-markdown
-Copy
-Edit
 
 4. Open `http://localhost:5173` in your browser.
 
